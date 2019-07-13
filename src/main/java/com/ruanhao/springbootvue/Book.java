@@ -1,14 +1,12 @@
 package com.ruanhao.springbootvue;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
-@ConfigurationProperties(prefix = "book")
+@Repository
 public class Book {
+	private Integer id;
 	private String name;
 	private String author;
-	private Float price;
 	public String getName() {
 		return name;
 	}
@@ -21,10 +19,12 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public Float getPrice() {
-		return price;
+	public Integer getId() {
+		return id;
 	}
-	public void setPrice(Float price) {
-		this.price = price;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }
+
+
