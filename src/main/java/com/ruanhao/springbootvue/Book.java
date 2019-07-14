@@ -1,5 +1,7 @@
 package com.ruanhao.springbootvue;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
