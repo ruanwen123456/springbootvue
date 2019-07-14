@@ -24,7 +24,7 @@ public class SingleUpload {
 	@PostMapping("/uploadSingle")
 	@ResponseBody
 	public String upload(MultipartFile uploadFile,HttpServletRequest request) {
-		String realPath = request.getSession().getServletContext().getRealPath("/uploadFile");
+		String realPath = request.getSession().getServletContext().getRealPath("/");
 		String format = sdf.format(new Date());
 		File folder = new File(realPath+format);
 		//如果目录不存在就创建
@@ -35,7 +35,7 @@ public class SingleUpload {
 		String newName = UUID.randomUUID().toString()+oldName.substring(oldName.indexOf("."), oldName.length());
 		try {
 			uploadFile.transferTo(new File(folder, newName));
-			String filePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/uploadFile/"+format+newName;
+			String filePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/"+format+newName;
 			return filePath;
 		} catch (Exception e) {
 			e.printStackTrace();
