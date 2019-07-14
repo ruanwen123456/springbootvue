@@ -2,6 +2,7 @@ package com.ruanhao.springbootvue;
 
 import java.nio.charset.Charset;
 
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.alibaba.fastjson.serializer.SerializerFeature;
