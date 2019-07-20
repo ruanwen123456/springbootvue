@@ -1,13 +1,10 @@
 package com.ruanhao.springbootvue;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class BookController {
+public class BooksController {
 	
 	@Autowired
 	private Book book;
